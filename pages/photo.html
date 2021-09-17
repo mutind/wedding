@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d slide imageshow</title>
+    <style> 
+        .slideshow{
+            margin: 0 auto;
+            padding-top: 50px;
+            height: 700px;
+            background: hotpink;
+            box-sizing: border-box;
+        }
+        .content{
+            margin: auto;
+            width: 190px;
+            perspective: 1000px;
+            position: relative;
+            padding-top: 80px;
+            align-items: center;
+             text-align: center;
+             
+
+        }
+        .content-carrousel{
+            width: 100%;
+            position: relative;
+            float: right;
+            animation: rotar 15s infinite linear;
+            transform-style:preserve-3d;
+        }
+        .content-carrousel:hover{
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        .content-carrousel figure{
+            width: 100%;
+            height: 120px;
+            border: 1px solid #4d444d;
+            overflow: hidden;
+            position: absolute;
+        }
+    
+            .content-carrousel figure:nth-child(1){
+                transform: rotateY(0deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(2){
+                transform: rotateY(40deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(3){
+                transform: rotateY(80deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(4){
+                transform: rotateY(120deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(5){
+                transform: rotateY(160deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(6){
+                transform: rotateY(200deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(7){
+                transform: rotateY(240deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(8){
+                transform: rotateY(280deg) translateZ(300px);
+            }
+            .content-carrousel figure:nth-child(9){
+                transform: rotateY(320deg) translateZ(300px);
+            }
+            .shadow{
+                position: absolute;
+box-shadow: 0px opx 20px 0px #000;
+border-radius: 2px;
+            }
+            .content-carrousel img{
+                image-rendering: auto;
+                transition: all 800ms;
+                width: 100%;
+                height: 100%;
+            }
+            .content-carrousel img:hover{
+                transform:scale(1.2);
+                transition: all 800ms;
+                
+            }
+            @keyframes rotar{
+                from{
+                    transform:rotateY(0deg);
+                }
+                to{
+                transform:rotateY(360deg);}
+            }
+            .container h2 span{
+        color: red!important;
+             }
+             .newssection img:hover{
+            opacity:0.5;
+            cursor:pointer;
+            transform: scale(1.1);
+            transition: .5s linear;
+        }
+
+        
+       
+             .container{
+                 width:1280px;
+                 margin:60px auto 0;
+                 display: flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+                
+             }
+             .container .box{
+                 position:relative;
+                 width: 300px;
+                 height:300px;
+                 background: pink;
+                margin: 10px;
+                box-sizing: border-box;
+                display: inline-block;
+             }
+             .container .box .imgBox{
+                 position: relative;
+                 overflow: hidden;
+             }
+             .container .box .imgBox img{
+                 max-width:150%;
+                 transition: transform 2s;
+             }
+             .container .box:hover .imgBox img{
+                 transform: scale(1.2);
+
+             }
+             .container .box .details{
+                 position: absolute;
+                 top: 10px;
+                 left: 10px;
+                 bottom: 10px;
+                 right: 10px;
+                 background: rgba(0,0,0,.8);
+                 transform: scaleY(0);
+                 transition: transform .5s;
+             }
+             .container .box:hover .details{
+                 transform: scaleY(1);
+             }
+
+
+             .container .box .details .content{
+                 position: absolute;
+                 top: 50%;
+                 transform: translateY(-50%);
+                 text-align: center;
+                 padding: 15px;
+                 color: #fff;
+             }
+             .container .box .details .content h2{
+                 margin: 0;
+                 padding: 0;
+                 font-size: 20px;
+                 color: #ff0;
+             }
+             .container .box .details .content p{
+                 margin: 10px 0 0;
+                 padding: 0;
+                
+             }
+
+    </style>
+</head>
+<body>
+   
+  <section class="slideshow">
+<div class="content">
+    <div class="content-carrousel">
+        <h1>Marylyne photography</h1>
+        <figure class="shadow"><img src="../assets/images/1.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/2.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/3.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/4.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/5.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/6.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/7.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/8.jpg"></figure>
+        <figure class="shadow"><img src="../assets/images/9.jpg"></figure>
+
+    </div>
+</div>
+  </section>  
+  <section class="container bg-light pt-5 pb-3">
+    <h2 class="text-danger text-center">ABOUT MARYLYNE WEDDING PLANERS <span>ORGANISERS</span></h2>
+  <center><div class="border"></div></center>
+<div class="container">
+<div class="box">
+<div class="imgBox">
+<img src="../assets/images/32.jpg" alt="">
+</div>
+<div class="details">
+  <div class="content">
+<h2>COUPLE PHOTOS</h2>  
+<p >we offer the best photography for couples..book us now</p>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="imgBox">
+<img src="../assets/images/30.jpg" alt="">
+          </div>
+          <div class="details">
+              <div class="content">
+            <h2>EVENT PHOTOS</h2>  
+            <p >we offer the best quality pictures for your wedding event </p>
+          </div>
+      </div>
+    </div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/37.jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2>OUR PHOTOGRAPHY</h2>  
+        <p >we beautify your wedding by taking quality pictures </p>
+      </div>
+  </div></div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/80.jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2>VENUES</h2>  
+        <p >we take the best pictures for wedding venues</p>
+      </div>
+  </div></div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/89.jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2>WE CREAT MEMORIES</h2>  
+        <p >we create beautiful memories for couples </p>
+      </div>
+  </div></div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/23.jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2>BRIDAL OUTFIT</h2>  
+        <p >we also take the best caption of bridal outfits</p>
+      </div>
+  </div></div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/24.jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2>CHURCH PHOTOGRAPHY</h2>  
+        <p >we also do offer photography in churches </p>
+      </div>
+  </div></div>
+<div class="box"> <div class="imgBox">
+<img src="../assets/images/images (1).jpg" alt="">
+      </div>
+      <div class="details">
+          <div class="content">
+        <h2> BRIDEMAID AND BRIDEMEN</h2>  
+        <p >we offer the ervices at affordable prices </p>
+      </div>
+  </div><div>
+  </section>
+  <section class="ict-mt-4 mb-5">
+    <h2 class="text-danger text-capitalize text-center pt-4">BOOK OUR PHOTOGRAPHY</h2>
+    <center>
+ </section>
+</body>
+</html>

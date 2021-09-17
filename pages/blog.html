@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Code Mo - Profile Card</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+html {
+  height: 100%;
+}
+body {
+  background-color:hotpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+}
+.snip {
+  font-family: 'Great Vibes', cursive;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4em;
+  background-color: #141414;
+}
+.snip * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip .background {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.2;
+  -webkit-filter: grayscale(100%) blur(10px);
+  filter: grayscale(100%) blur(10px);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+.snip figcaption {
+  width: 100%;
+  padding: 15px 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.snip .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  max-width: 100px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.snip h3 {
+  margin: 0 0 5px;
+  font-weight: 400;
+}
+.snip h3 span {
+  display: block;
+  font-size: 0.6em;
+  color: #f39c12;
+  opacity: 0.75;
+}
+.snip i {
+  padding: 10px 5px;
+  display: inline-block;
+  font-size: 32px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.65;
+}
+.snip a {
+  text-decoration: none;
+}
+.snip i:hover {
+  opacity: 1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35 ease;
+  color: blue;
+}
+.snip:hover .background,
+.snip.hover .background {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<figure class="snip">
+  <img src="../assets/images/45.jpg" alt="" class="background" />
+  <img src="../assets/images/45.jpg" alt="" class="profile" />
+  <figcaption>
+    <h3>David Muema<span>Event organiser</span></h3>
+    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+      <a href="#"><i class="ion-social-twitter"></i></a>
+      <a href="#"><i class="ion-social-vimeo-outline"></i></a></div>
+  </figcaption>
+</figure>
+
+<figure class="snip">
+  <img src="../assets/images/41.jpg" alt="" class="background" />
+  <img src="../assets/images/41.jpg" alt="" class="profile" />
+  <figcaption>
+    <h3>marylyne<span>Photographer</span></h3>
+    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+      <a href="#"><i class="ion-social-twitter"></i></a>
+      <a href="#"><i class="ion-social-vimeo-outline"></i></a></div>
+  </figcaption>
+</figure>
+
+<figure class="snip">
+  <img src="../assets/images/40.jpg" alt="" class="background" />
+  <img src="../assets/images/40.jpg" alt="" class="profile" />
+  <figcaption>
+    <h3>Event <span>Accountant</span></h3>
+    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
+      <a href="#"><i class="ion-social-twitter"></i></a>
+      <a href="#"><i class="ion-social-vimeo-outline"></i></a></div>
+  </figcaption>
+</figure>
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
